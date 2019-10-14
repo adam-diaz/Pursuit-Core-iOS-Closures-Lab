@@ -25,13 +25,11 @@ assert(myVal == 5, "Expected myVal to be five, but was \(myVal)")
 
 // Write a function called multiples(of:in) that takes in an array of Ints and returns all of the Ints that are a multiple of a given number n.  Use filter in your function.
 
-func multiples(of num:[Int], in arr: [Int] ) -> [Int] {
-    var filtered = [Int]()
-    for num in arr {
-        filtered = arr.filter { _ in num % 3 == 0 }
-        
-    }
-    return filtered
+func multiples(of num:Int, in arr: [Int]) -> [Int] {
+   let output = arr.filter {
+       $0 % num == 0
+   }
+   return output
 }
 
 // Uncomment out the following lines to check your solution
